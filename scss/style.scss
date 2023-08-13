@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Lexend+Deca&family=Outfit:wght@700&family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&family=Outfit:wght@700&family=PT+Sans&display=swap');
+$Bright-orange: hsl(31, 77%, 52%);
+$Dark-cyan: hsl(184, 100%, 22%);
+$Very-dark-cyan: hsl(179, 100%, 13%);
+
+// paragraph element
+$Transparent-white: hsla(0, 0%, 100%, 0.75);
+
+// (background, headings, buttons)
+$Very-light-gray: hsl(0, 0%, 95%);   
+
+body {
+    background-color: $Very-light-gray;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .flex {
+        display: flex;
+        border-radius: 7px;
+        
+
+    &-item {
+        max-width: 230px;
+        height: max-content;
+        padding: 30px;
+
+            & h2 {
+                font-family: 'Big Shoulders Display', cursive;
+                color: $Very-light-gray;
+                font-size: 30px;
+            }
+
+            & p {
+                color: $Transparent-white;
+                font-family: 'Lexend Deca', sans-serif;
+                font-size: 15px;
+            }
+
+            & a {
+                display: block;
+                width: fit-content;
+                margin-top: 60px;
+                margin-bottom: 30px;
+                padding: 10px 15px;
+                text-decoration: none;
+                background-color: $Very-light-gray;
+                font-family: 'Lexend Deca', sans-serif;
+                font-size: 15px;
+                border-radius: 25px;
+            }
+        }
+
+        &-item:nth-child(1) {
+            background-color: $Bright-orange;
+            border-top-left-radius: 7px;
+            border-bottom-left-radius: 7px;
+
+            & a {
+                color: $Bright-orange;
+            }
+        }
+
+        &-item:nth-child(2) {
+            background-color: $Dark-cyan;
+
+            & a {
+                color: $Dark-cyan;
+            }
+        }
+
+        &-item:nth-child(3) {
+            background-color: $Very-dark-cyan;
+            border-top-right-radius: 7px;
+            border-bottom-right-radius: 7px;
+
+            & a {
+                color: $Very-dark-cyan;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 675px) {
+    .main {
+        height: 100%;
+
+        .flex {
+            flex-direction: column;
+    
+            &-item:nth-child(1) {
+                border-bottom-left-radius: 0px;
+                border-top-right-radius: 7px;
+            }
+
+            &-item:nth-child(3) {
+                border-top-right-radius: 0px;
+                border-bottom-left-radius: 7px;
+            }
+        }
+    }
+    
+}

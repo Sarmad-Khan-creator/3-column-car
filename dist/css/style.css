@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Lexend+Deca&family=Outfit:wght@700&family=PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&family=Outfit:wght@700&family=PT+Sans&display=swap");
+body {
+  background-color: hsl(0, 0%, 95%);
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main .flex {
+  display: flex;
+  border-radius: 7px;
+}
+.main .flex-item {
+  max-width: 230px;
+  height: max-content;
+  padding: 30px;
+}
+.main .flex-item h2 {
+  font-family: "Big Shoulders Display", cursive;
+  color: hsl(0, 0%, 95%);
+  font-size: 30px;
+}
+.main .flex-item p {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+}
+.main .flex-item a {
+  display: block;
+  width: fit-content;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  padding: 10px 15px;
+  text-decoration: none;
+  background-color: hsl(0, 0%, 95%);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  border-radius: 25px;
+}
+.main .flex-item:nth-child(1) {
+  background-color: hsl(31, 77%, 52%);
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+.main .flex-item:nth-child(1) a {
+  color: hsl(31, 77%, 52%);
+}
+.main .flex-item:nth-child(2) {
+  background-color: hsl(184, 100%, 22%);
+}
+.main .flex-item:nth-child(2) a {
+  color: hsl(184, 100%, 22%);
+}
+.main .flex-item:nth-child(3) {
+  background-color: hsl(179, 100%, 13%);
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+.main .flex-item:nth-child(3) a {
+  color: hsl(179, 100%, 13%);
+}
+
+@media only screen and (max-width: 675px) {
+  .main {
+    height: 100%;
+  }
+  .main .flex {
+    flex-direction: column;
+  }
+  .main .flex-item:nth-child(1) {
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 7px;
+  }
+  .main .flex-item:nth-child(3) {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 7px;
+  }
+}/*# sourceMappingURL=style.css.map */
